@@ -1,1 +1,2 @@
-random_rps.rb
+array = ["Rock", "Paper", "Scissors"]
+item = array.sample

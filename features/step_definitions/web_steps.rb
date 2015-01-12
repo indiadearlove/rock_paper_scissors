@@ -27,6 +27,10 @@ end
 
 When(/^I input "(.*?)"$/) do |arg1|
   fill_in "name", :with => arg1
+  click_button "submit"
 end
 
+Given(/^I am ready to choose$/) do
+  step "I have pressed new game"
 
+end

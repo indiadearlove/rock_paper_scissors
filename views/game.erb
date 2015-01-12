@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <style>
+    body {
+      text-align: center;
+      background-color: black;
+      color: white;
+    }
+   </style> 
+</head>
+
+
+<body>
+  <h1>Hello,  <%= @player %>! </h1>
+  <h2>Rock, Paper or Scissors?</h2>
+
+  <form action=
+    <% item = ["Rock", "Paper", "Scissors"].sample %>
+    <% if item == "Rock" %>
+      "/tie"
+    <% elsif item == "Paper" %>
+      "/lose"
+    <% else %>
+      "/win"
+    <% end %>
+  >
+    <input type="submit" value= "Rock">
+  </form>
+  <form action=
+    <% item = ["Rock", "Paper", "Scissors"].sample %>
+    <% if item == "Rock" %>
+      "/win"
+    <% elsif item == "Paper" %>
+      "/tie"
+    <% else %>
+      "/lose"
+    <% end %>
+  >
+    <input type="submit" value="Paper">
+  </form>
+  <form action=
+    <% item = ["Rock", "Paper", "Scissors"].sample %>
+    <% if item == "Rock" %>
+      "/lose"
+    <% elsif item == "Paper" %>
+      "/win"
+    <% else %>
+      "/tie"
+    <% end %>
+  >
+    <input type="submit" value="Scissors">
+  </form>  
+</body>
+</html>
