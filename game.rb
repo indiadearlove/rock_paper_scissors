@@ -1,5 +1,5 @@
 require 'sinatra/base'
-require_relative = "/lib/random_rps.rb"
+require_relative "lib/random_rps"
 
 class Game < Sinatra::Base
   
@@ -10,15 +10,28 @@ class Game < Sinatra::Base
   end
 
   get '/player' do
-    @player = params[:name]
-    session[:name]= @player
     erb :player
   end
 
   get '/game' do
     @player = params[:name]
+
     erb :game
   end
+
+  get '/selection' do
+    @selection = params[:pick]
+    win = RockPaperScissors.play(@selection)
+    if win == "Win"
+      erb :win
+    elsif win == "Lose"
+       erb :lose
+    else
+      erb :tie
+    end
+      
+  end
+
 
   get '/tie' do
     erb :tie
