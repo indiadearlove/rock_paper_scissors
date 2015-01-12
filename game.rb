@@ -22,27 +22,15 @@ class Game < Sinatra::Base
   get '/selection' do
     @selection = params[:pick]
     win = RockPaperScissors.play(@selection)
+    puts win
     if win == "Win"
       erb :win
     elsif win == "Lose"
-       erb :lose
+      erb :lose
     else
       erb :tie
     end
       
-  end
-
-
-  get '/tie' do
-    erb :tie
-  end
-
-  get '/lose' do
-    erb :lose
-  end
-
-  get '/win' do
-    erb :win
   end
 
   # start the server if ruby file executed directly

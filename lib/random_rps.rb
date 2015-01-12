@@ -4,9 +4,8 @@ class RockPaperScissors
 
   def self.play(selection)
     return "Tie" if selection == pick
+    {message: "Win", chose: selection, competetor: pick}
     message = RULES[selection] == pick ? "Win" : "Lose"
-    {message: message, chose: selection, competetor: pick}
- 
   end
 
   def self.pick
