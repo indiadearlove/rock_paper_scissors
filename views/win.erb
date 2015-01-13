@@ -4,13 +4,17 @@
       background-color: #AFEEEE;
       color: black;
       text-align: center;
-      font-size: 100px
+      font-size: 30px
     }
   </style>
 </head>
 
 <body>
-  YOU WIN!
+  <h1>YOU WIN!</h1>
+  <h2>
+    <br>You picked <%= @pick %>!</br> 
+    <br>The computer picked <%= @selection %>.</br>
+  </h2>
   <form action= '/game'>
   <input type="submit" value="Try Again">
   </form>

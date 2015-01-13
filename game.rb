@@ -15,13 +15,16 @@ class Game < Sinatra::Base
 
   get '/game' do
     @player = params[:name]
-
     erb :game
   end
 
   get '/selection' do
-    @selection = params[:pick]
-    win = RockPaperScissors.play(@selection)
+    @pick = params[:pick]
+    selection = RockPaperScissors.pick
+    @selection = selection
+    win = RockPaperScissors.play(@pick)
+    puts selection
+    puts @pick
     puts win
     if win == "Win"
       erb :win

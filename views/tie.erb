@@ -4,12 +4,14 @@
       background-color: #AFEEEE;
       color: black;
       text-align: center;
+      font-size: 50px;
     }
   </style>
 </head>
 
 <body>
-  It's a tie!
+  <h1>It's a tie!</h1>
+  <h2>You both picked <%= @pick %> </h2>
   <form action= '/game'>
   <input type="submit" value="Try Again">
   </form>

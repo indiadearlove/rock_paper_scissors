@@ -1,6 +1,6 @@
 class RockPaperScissors
 
-  RULES =  {"scissors" => "paper", "paper" => "rock", "rock" => "scissors"}
+  RULES =  {"paper" => "scissors", "rock" => "paper", "scissors" => "rock"}
 
   def self.play(selection)
     return "Tie" if selection == pick
